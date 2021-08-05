@@ -210,7 +210,7 @@ ITZ-RN-V2
 <img src="https://user-images.githubusercontent.com/41010744/128319506-3490e2cf-842d-4a5e-9bee-fe1b451c9cfb.png">
 
 ## 구현 결과 : 차례대로 로딩 후 전면광고 & 상단 배너 광고 
-<img style="width : 40%" src="https://user-images.githubusercontent.com/41010744/128320673-8c77910f-38df-4d71-817f-5e5454893ab8.png">
-<img style="width : 40%" src="https://user-images.githubusercontent.com/41010744/128320709-ffa1a634-3b9c-4064-9115-7532396312eb.png">
-<img style="width : 40%" src="https://user-images.githubusercontent.com/41010744/128320744-fd47a6d3-d9e5-473b-b2fa-e29f541ceaff.png">
-<img style="width : 40%" src="https://user-images.githubusercontent.com/41010744/128320770-fd06a90b-ffc2-47b3-88ee-31a2b3ddff8c.png">
+<img style="width : 40%; display:inline-block" src="https://user-images.githubusercontent.com/41010744/128320673-8c77910f-38df-4d71-817f-5e5454893ab8.png">
+<img style="width : 40%; display:inline-block" src="https://user-images.githubusercontent.com/41010744/128320709-ffa1a634-3b9c-4064-9115-7532396312eb.png">
+<img style="width : 40%; display:inline-block" src="https://user-images.githubusercontent.com/41010744/128320744-fd47a6d3-d9e5-473b-b2fa-e29f541ceaff.png">
+<img style="width : 40%; display:inline-block" src="https://user-images.githubusercontent.com/41010744/128320770-fd06a90b-ffc2-47b3-88ee-31a2b3ddff8c.png">
