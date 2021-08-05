@@ -199,7 +199,7 @@ ITZ-RN-V2
 - 기본 적인 앱의 구조는 android, ios 내 src 폴더 내에서 로직을 작성하지 않고 루트 폴더 내 src 내 component로 따로 폴더를 관리하여 해당 파일들이 android, ios 두 플랫폼에서 같이 동작할 수 있도록 RN의 장점을 살린 구조입니다.
 - 제가 맡은 기능은 아래와 같습니다.
 - src/components/main > 공개 채팅방, 1:1 채팅방 에서의 banner 광고
-- src/components/auth > 로그인 후 로딩 중 전면 광고 
+- src/components/auth > 로그인 후 로딩 중 전면 광고
 - 배너광고와 전면광고에 대한 android 개발에 대해서 아래의 메뉴얼을 제공하고 있습니다.
 - 배너 광고 : https://developers.google.com/admob/android/banner?hl=ko
 - 전면 광고 : https://developers.google.com/admob/android/interstitial?hl=ko
@@ -209,8 +209,13 @@ ITZ-RN-V2
 
 <img src="https://user-images.githubusercontent.com/41010744/128319506-3490e2cf-842d-4a5e-9bee-fe1b451c9cfb.png">
 
-## 구현 결과 : 차례대로 로딩 후 전면광고 & 상단 배너 광고 
-<img style="width : 40%; display:inline-block" src="https://user-images.githubusercontent.com/41010744/128320673-8c77910f-38df-4d71-817f-5e5454893ab8.png">
-<img style="width : 40%; display:inline-block" src="https://user-images.githubusercontent.com/41010744/128320709-ffa1a634-3b9c-4064-9115-7532396312eb.png">
-<img style="width : 40%; display:inline-block" src="https://user-images.githubusercontent.com/41010744/128320744-fd47a6d3-d9e5-473b-b2fa-e29f541ceaff.png">
-<img style="width : 40%; display:inline-block" src="https://user-images.githubusercontent.com/41010744/128320770-fd06a90b-ffc2-47b3-88ee-31a2b3ddff8c.png">
+## 구현 결과 : 차례대로 로딩 후 전면광고 & 상단 배너 광고
+
+<table>
+<tr>
+<td><img src="https://user-images.githubusercontent.com/41010744/128320673-8c77910f-38df-4d71-817f-5e5454893ab8.png"></td>
+<td><img src="https://user-images.githubusercontent.com/41010744/128320709-ffa1a634-3b9c-4064-9115-7532396312eb.png"></td>
+<td><img src="https://user-images.githubusercontent.com/41010744/128320744-fd47a6d3-d9e5-473b-b2fa-e29f541ceaff.png"></td>
+<td><img src="https://user-images.githubusercontent.com/41010744/128320770-fd06a90b-ffc2-47b3-88ee-31a2b3ddff8c.png"></td>
+</tr>
+</table>
