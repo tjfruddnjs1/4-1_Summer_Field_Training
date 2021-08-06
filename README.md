@@ -5,7 +5,7 @@
 2. [Java Spring](#Java-Spring)
 3. [React](#React)
 
-### React Native (ITZ-RN-V2) 1주 ~ 3주
+### React Native (ITZ-RN-V2) 1주차 ~ 3주차
 
 > 개요 : 
 - 크로스 플랫폼(cross-platform)을 지원하는 서비스 중인 App ITZY(https://play.google.com/store/apps/details?id=kr.co.userinsight.itz)에 광고 수익을 위해 Google Admob api를 추가하는 역할을 맡았습니다.
@@ -29,6 +29,22 @@
 
 > 관련 자세한 내용은 ReactNative 폴더내 정리하였습니다.
 
-### Java Spring
+### Java Spring (ITZ-ADMIN) 4주차 ~ 5주차
+
+> 개요 :
+- 위의 앱 (ITZY)을 관리할 수 있는 관리자 웹 페이지를 Java Spring으로 만드는 역할을 맡았습니다.
+
+> 환경 세팅 
+1. Pom.xml
+- spring-boot-starter pacakge : web, tomcat, test, thymeleaf, jap, dialect, secuirty, validation
+- lombok : Java의 라이브러리로 반복되는 메소드를 Annotation을 사용해서 자동으로 작성해주는 라이브러리
+
+2. Database 
+- Maria DB : 10.3(x64)
+- heidiSQL : database 내부 테이블 구조 및 데이터들을 ui로 구조화 하여 보여주는 프로그램 (mysql workbench 와 유사)
+
+3. IDE, JDK, 협업 도구는 RN과 동일
+
+> 관련 자세한 내용은 JavaSpring 폴더내 정리하였습니다.
 
 ### React
