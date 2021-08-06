@@ -248,4 +248,108 @@ const handleRouter = (id) => {
 </tr>
 </table>
 
-## 8주차 :
+## 8주차 : 기능 구현 (채팅방 관리 - 공개(public), 1:1(private))
+
+> 7주차에서 설명한 redux , api, route 지정 같은 중복 작업을 제외한 구현하면서 어려웠던 요소에 대해서 설명하겠습니다.
+
+1. firebase 참조하는 영역이 여러개 있고 두개를 참조하여 데이터를 변환시키고 redux에 데이터 저장
+
+- firebase 내 데이터가 아래와 같이 저장되어 있어 firebase.ref(채팅방) 으로만 데이터 모두를 출력할 수 없고 채팅방 데이터에 접근해서 둘의 데이터를 원하는 형태로 가져와야 했습니다.
+
+```
+| 채팅방
+    | 공개
+        | room key
+            | 메시지 key
+                | message : 안녕하세요
+                | timestamp : 161390732102
+                | userId : abc123cde456
+    | 1:1 채팅
+| 채팅방 데이터
+    | 공개
+        | room key
+            | room key
+            | 방이름
+            | ...
+            | 사용자
+                | photoURL  : ...
+                | userId    : abc123cde456
+                | username  : 설경원
+```
+
+- 해당 작업은 애초에 api에서 데이터를 가져올 때 두 개의 reference(채팅방, 채팅방 데이터)를 가져오고 id를 비교해서 데이터를 원하는 형태로 만들어 redux에서 참조할 수 있도록 하였습니다.
+
+- 또한, reference(채팅방 데이터)에는 사용자 이름과 id가 존재하지만 메시지가 여러개 있어도 하나밖에 존재하지 않아 userList를 따로 만들어 view에 전달하는 작업을 하였습니다.
+
+- **1번** 항목을 처리하는 데 있어 가장 어려웠던 것은 로직상의 어려움이라기 보다는 아직 redux 구조에 익숙하지 않고 여러개의 reference를 참조해 원하는 데이터로 변환하는 것이 익숙치 않아 어려웠던 것 같습니다. 아래는 로직 일부입니다.
+
+```jsx
+/* api */
+const chatList = await fetchPublicChatApi();
+
+const publicMessage = [];
+
+await db
+  .ref("채팅방 데이터")
+  .get()
+  .then((snapshot) => {
+    let chat = snapshot.val();
+
+    for (const [key, value] of Object.entries(chat)) {
+      Object.values(value).map((chat) => {
+        chat.date = moment(chat.timestamp).format("YYYY/MM/DD");
+
+        delete chat.timestamp;
+      });
+
+      for (let roomId in chatList) {
+        if (chatList[roomId].users && chatList[roomId].id === key)
+          publicMessage[key] = {
+            roomName: chatList[roomId].name,
+            users: chatList[roomId].users,
+            message: value,
+          };
+      }
+    }
+  });
+
+return publicMessage;
+
+/* reducer */
+function* fetchChatAsync(id) {
+  const chatList = yield call(fetchPublicMessageApi);
+  let chat = {};
+  for (const [key, value] of Object.entries(chatList)) {
+    if (key === id.id) chat = value;
+  }
+
+  let userList = new Map();
+  for (let userId in chat.message) {
+    for (let username in chat.users) {
+      if (chat.message[userId].userId === username)
+        userList.set(username, [
+          chat.users[username].username,
+          chat.users[username].photoURL,
+        ]);
+    }
+  }
+
+  yield put({
+    type: GET_CHAT,
+    chat: chat,
+    userList: userList,
+  });
+}
+```
+
+- 데이터만 잘 처리하고 view 부분을 넘겨주기만 하면 출력 및 관리 하는 것은 수월하게 했던 것 같습니다.
+
+## 구현 결과 : 차례대로 채팅방 리스트 , 채팅방 관리 화면 , firebase (채팅방, 채팅방 정보)
+
+<table>
+<tr>
+<td><img src="https://user-images.githubusercontent.com/41010744/128465105-f2619603-77a1-42a5-9293-41e913705d11.png"></td>
+<td><img src="https://user-images.githubusercontent.com/41010744/128464760-23fd695f-9b75-4fef-b591-d61e580318ad.png"></td>
+<td><img src="https://user-images.githubusercontent.com/41010744/128464961-289b2ea1-1ba6-437d-81db-7e38b957fa5b.png"></td>
+</tr>
+</table>
