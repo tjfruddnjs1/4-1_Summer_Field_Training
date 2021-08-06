@@ -348,8 +348,8 @@ function* fetchChatAsync(id) {
 
 <table>
 <tr>
-<td><img src="https://user-images.githubusercontent.com/41010744/128465105-f2619603-77a1-42a5-9293-41e913705d11.png"></td>
-<td><img src="https://user-images.githubusercontent.com/41010744/128464760-23fd695f-9b75-4fef-b591-d61e580318ad.png"></td>
-<td><img src="https://user-images.githubusercontent.com/41010744/128464961-289b2ea1-1ba6-437d-81db-7e38b957fa5b.png"></td>
+<td><img src="https://user-images.githubusercontent.com/41010744/128465331-b7942a9b-accc-402a-85fd-c97c25827db2.png"></td>
+<td><img src="https://user-images.githubusercontent.com/41010744/128465701-420d5572-b2b8-4dc4-9c72-f84e9a1c2dd1.png"></td>
+<td><img src="https://user-images.githubusercontent.com/41010744/128465400-21994e34-1e6d-4311-b099-a3da20f6bada.png"></td>
 </tr>
 </table>
