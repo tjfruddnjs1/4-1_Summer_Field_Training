@@ -243,12 +243,12 @@ const handleRouter = (id) => {
 
 <table>
 <tr>
-<td><img src="https://user-images.githubusercontent.com/41010744/128460017-41d84e5f-2446-41b1-887a-a31cb9876db2.png"></td>
-<td><img src="https://user-images.githubusercontent.com/41010744/128460185-e34940af-cf83-4845-ad4a-8652da565035.png"></td>
+<td><img src="https://user-images.githubusercontent.com/41010744/128970585-26359984-5ce6-47b3-80b0-acb43b4f1ba2.png"></td>
+<td><img src="https://user-images.githubusercontent.com/41010744/128970661-7eeb590d-078f-46f3-9248-9d5edbc1bc81.png"></td>
 </tr>
 </table>
 
-## 8주차 : 기능 구현 (채팅방 관리 - 공개(public), 1:1(private))
+## 8주차 : 기능 구현 (채팅방 리스트/관리 - 공개(public), 1:1(private) , 공개 채팅방 생성)
 
 > 7주차에서 설명한 redux , api, route 지정 같은 중복 작업을 제외한 구현하면서 어려웠던 요소에 대해서 설명하겠습니다.
 
@@ -344,12 +344,14 @@ function* fetchChatAsync(id) {
 
 - 데이터만 잘 처리하고 view 부분을 넘겨주기만 하면 출력 및 관리 하는 것은 수월하게 했던 것 같습니다.
 
-## 구현 결과 : 차례대로 채팅방 리스트 , 채팅방 관리 화면 , firebase (채팅방, 채팅방 정보)
+## 구현 결과 : 차례대로 채팅방 리스트(공개/1:1) , 채팅방 관리 화면(공개/1:1), 공개 채팅방 생성
 
 <table>
 <tr>
-<td><img src="https://user-images.githubusercontent.com/41010744/128465331-b7942a9b-accc-402a-85fd-c97c25827db2.png"></td>
-<td><img src="https://user-images.githubusercontent.com/41010744/128465701-420d5572-b2b8-4dc4-9c72-f84e9a1c2dd1.png"></td>
-<td><img src="https://user-images.githubusercontent.com/41010744/128465400-21994e34-1e6d-4311-b099-a3da20f6bada.png"></td>
+<td><img src="https://user-images.githubusercontent.com/41010744/128970835-3f6c4a7a-4d38-4102-91b6-6468c40226cd.png"></td>
+<td><img src="https://user-images.githubusercontent.com/41010744/128970956-45fa8662-a770-403c-a14f-573d91f34398.png"></td>
+<td><img src="https://user-images.githubusercontent.com/41010744/128971034-579ee0ee-8e5b-4d7d-928a-63ad442ecee4.png"></td>
+<td><img src="https://user-images.githubusercontent.com/41010744/128971088-228dbfb3-b36d-4d25-bc1c-b394f10864cc.png"></td>
+<td><img src="https://user-images.githubusercontent.com/41010744/128971169-9dedabed-d742-40fb-a950-7aefcc828b12.png"></td>
 </tr>
 </table>

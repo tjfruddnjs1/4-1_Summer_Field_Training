@@ -4,9 +4,9 @@
 
 ## 목차
 
-1. [React Native](#React-Native)
-2. [Java Spring](#Java-Spring)
-3. [React](#React)
+1. [React Native](#React-Native-(ITZ-RN-V2)-1주차-~-3주차)
+2. [Java Spring](#Java-Spring-(ITZ-ADMIN)-4주차-~-5주차)
+3. [React](#React-(ITZ-WEB)-6주차-~-8주차)
 
 ### React Native (ITZ-RN-V2) 1주차 ~ 3주차
 
