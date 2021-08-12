@@ -344,7 +344,7 @@ function* fetchChatAsync(id) {
 
 - 데이터만 잘 처리하고 view 부분을 넘겨주기만 하면 출력 및 관리 하는 것은 수월하게 했던 것 같습니다.
 
-## 구현 결과 : 차례대로 채팅방 리스트(공개/1:1) , 채팅방 관리 화면(공개/1:1), 공개 채팅방 생성
+## 구현 결과 : 차례대로 채팅방 리스트(공개/1:1) , 채팅방 관리 화면(공개/1:1), 공개 채팅방 생성, GIS 적용
 
 <table>
 <tr>
@@ -353,5 +353,6 @@ function* fetchChatAsync(id) {
 <td><img src="https://user-images.githubusercontent.com/41010744/128971034-579ee0ee-8e5b-4d7d-928a-63ad442ecee4.png"></td>
 <td><img src="https://user-images.githubusercontent.com/41010744/128971088-228dbfb3-b36d-4d25-bc1c-b394f10864cc.png"></td>
 <td><img src="https://user-images.githubusercontent.com/41010744/128971169-9dedabed-d742-40fb-a950-7aefcc828b12.png"></td>
+<td><img src="https://user-images.githubusercontent.com/41010744/129160054-da6270ca-46b0-4e03-8a0d-affb4e558d96.png"></td>
 </tr>
 </table>
